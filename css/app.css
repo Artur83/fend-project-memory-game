@@ -34,11 +34,11 @@ h1 {
 }
 
 /*
- * Styles for the deck of cards
+ * Deck of cards
  */
 
 .deck {
-    width: 660px;
+    width: 680px;
     min-height: 680px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
@@ -58,7 +58,11 @@ h1 {
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
+    /*margin: 1%;*/
     cursor: pointer;
+    /*transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform .3s ease;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,14 +85,16 @@ h1 {
     font-size: 33px;
 }
 
+
 /*
- * Styles for the Score Panel
+ * Score panel
  */
 
 .score-panel {
-    text-align: left;
-    width: 345px;
+    width: 680px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .score-panel .stars {
@@ -96,14 +102,79 @@ h1 {
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
+    width: 25%;
 }
 
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
+    color: gold;
+}
+
+.score-panel .moves {
+    width: 25%;
+}
+
+.score-panel .time {
+    width: 25%;
 }
 
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+
+/*
+ * Final score section
+ */
+
+.final-score-section {
+    width: 300px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.stars-end {
+    margin: 10px;
+    padding: 0;
+    display: inline-block;
+}
+
+.stars-end li {
+    list-style: none;
+    display: inline-block;
+    color: gold;
+}
+
+.final-score-section .restart-end {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #7d97ad;
+    font-size: 12px;
+}
+
+img.social {
+    width: 48px;
+    height: 48px;
 }
