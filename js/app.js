@@ -121,15 +121,15 @@ function comparison() {
 function stars() {
 	const starar = star.getElementsByTagName('i');
 	for (i = 0; i < starar.length; i++) {
-		if (moves > 10 && moves <= 15) {
+		// set 2 stars after 10 moves
+		if (moves > 10 && moves <= 20) {
 			starar[2].className = 'fa fa-star-o';
 			starNum = 2;
-		} else if (moves > 15 && moves <= 20) {
+		// set 1 star after 20 moves
+		} else if (moves > 20) {
 			starar[1].className = 'fa fa-star-o';
 			starNum = 1;
-		} else if (moves > 20) {
-			starar[0].className = 'fa fa-star-o';
-			starNum = 0;
+		// set 3 star below 10 moves
 		} else {
 			starar[0].className = 'fa fa-star';
 			starar[1].className = 'fa fa-star';
@@ -147,6 +147,7 @@ function stars() {
 
 function end() {
 	if (match === 8) {
+		couterStop();
 		container.style.display = 'none';
 		footer.style.display = 'none';
 		finalScoreSection.removeAttribute('style');
